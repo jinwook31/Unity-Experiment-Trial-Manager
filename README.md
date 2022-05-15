@@ -32,8 +32,9 @@ After experiemnt, you can find the result CSV file in the Asset folder.
 
 ### Pre-generated Trial CSV Format
 
-location: inside Assets Folder
-It must include 'partiNumber', 'trialNumber' in 0, 1 header index in order to initiate experiment.
+- Location : ./Assets/(your file name).csv
+
+The CSV must include 'partiNumber', 'trialNumber' in 0 and 1 header index in order to initiate the experiment. Also, the slots for output needs to be empty as the 'currentTime', 'responseIntensity' and 'responseTime' figure below.
 
 ![ex_screenshot](https://github.com/jinwook31/Unity-Experiment-Trial-Manager/blob/main/Images/csv%20format.png)
 
