@@ -3,13 +3,13 @@
 Unity Trial Manager for 3D/VR/AR Behavioral Experiment
 
 
-### Requirement
+## Requirement
 
 - Unity
 - Pre-generated Trial CSV (in correct format)
 - Experiment Trial Manager.unitypackage
 
-### Usage
+## Usage
 
 import the package into your Unity project and include Experiment Manager.prefab to your scene.
 
@@ -26,10 +26,7 @@ You need to type in 4 components in Trial Data (i.e., CSV File Name, Input Idx, 
 - Start From : Type the trial number that you want to start from.
 
 
-
-### Trial Manager Work Flow
-
-![ex_screenshot](https://github.com/jinwook31/Unity-Experiment-Trial-Manager/blob/main/Images/Trial%20Mng%20Flow.JPG)
+After experiemnt, you can find the result CSV file in the Asset folder.
 
 
 
@@ -40,4 +37,9 @@ It must include 'partiNumber', 'trialNumber' in 0, 1 header index in order to in
 
 ![ex_screenshot](https://github.com/jinwook31/Unity-Experiment-Trial-Manager/blob/main/Images/csv%20format.png)
 
+
+
+## Trial Manager Work Flow
+
+![ex_screenshot](https://github.com/jinwook31/Unity-Experiment-Trial-Manager/blob/main/Images/Trial%20Mng%20Flow.JPG)
 
