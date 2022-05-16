@@ -30,7 +30,7 @@ public class TrialData : MonoBehaviour{
     public void initTrialData(){
         string[] header = trialData[lineIdx];
         DataLogger.dataLogger.writeHeader(header);
-        DataLogger.dataLogger.initDataLogger(trialData.Count-1, trialData[1][0]);  //Get total trial number & participant ID
+        DataLogger.dataLogger.initDataLogger(trialData.Count, trialData[1][0]);  //Get total trial number & participant ID
 
         trialInput = new string[inputIdx];
         trialOutput = new string[outputIdx];
