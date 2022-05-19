@@ -27,7 +27,7 @@ public class TrialData : MonoBehaviour{
         trialData = csvreader.Read(csvFileName.ToString());
     }
 
-    public void initTrialData(){
+    public bool initTrialData(){
         string[] header = trialData[lineIdx];
         DataLogger.dataLogger.writeHeader(header);
         DataLogger.dataLogger.initDataLogger(trialData.Count, trialData[1][0]);  //Get total trial number & participant ID
@@ -41,6 +41,7 @@ public class TrialData : MonoBehaviour{
         }
 
         Debug.Log("EXPERIMENT TRIALS INITIATED (Read Values with getTrialInfo(idx))");
+        return true;
     }
 
     private void writeData2CSV(string[] output){
@@ -72,7 +73,7 @@ public class TrialData : MonoBehaviour{
         string[] line = readNextLine();
 
         if(line == null){    //EXP ENDED
-            //Quit();
+            Quit();
             return false;
         }else{
             // Assign line to Input arrays
