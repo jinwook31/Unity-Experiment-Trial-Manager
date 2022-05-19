@@ -29,6 +29,25 @@ You need to type in 4 components in Trial Data (i.e., CSV File Name, Input Idx, 
 After experiemnt, you can find the result CSV file in the Asset folder.
 
 
+## Experiment Manager
+
+After setting parameters, all you need to do with this template is to link your stimuli code (visual, audio, haptic etc.) with the trial info in the ExperimentManager.
+
+Please see the example in the 'ExperimentManager.cs'. You do not need to modify other scripts in the template! (Except when you want to modify the result CSV path.)
+
+- Save the trial results
+~~~
+string[] trialResult = {"2022-05-12 12:30:22","3","5642"};
+bool readDone = TrialData.td.trialDone(false, trialResult);
+~~~
+
+- Read the stimuli for next trial
+~~~
+string stim0 = TrialData.td.getTrialInfo(2);
+string stim1 = TrialData.td.getTrialInfo(3);
+~~~
+
+
 
 ### Pre-generated Trial CSV Format
 
