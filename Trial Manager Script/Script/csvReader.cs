@@ -20,7 +20,7 @@ public class csvReader : MonoBehaviour
                 break;
             }
 
-            var data_values = data_String.Split(','); //string, string타입
+            var data_values = data_String.Split(','); //string, string Type
             list.Add(data_values);
         }
 
