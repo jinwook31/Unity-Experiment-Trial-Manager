@@ -1,8 +1,8 @@
 # Unity-Experiment-Trial-Manager
 
-A Unity template for 2D/3D/VR/AR Behavioral Experiment. Recent HCI and cognitive, behavioral research use Unity to implement their experiment. There are already various frameworks (https://github.com/immersivecognition/unity-experiment-framework) on Github that provide a simple and faster implementation environment. However, those frameworks do not provide functions that restart from a specific point. Escpecially for VR experiment, there are various components that could occur error such as tracking, power and connection etc. Thus, if there is an error during the experiment, it needs to be done from the beginning.
+A Unity library for 2D/3D/VR/AR Behavioral Experiment. Recent HCI and cognitive, behavioral research use Unity to implement their experiment. There are already various frameworks (https://github.com/immersivecognition/unity-experiment-framework) on Github that provide a simple and faster implementation environment. However, those frameworks do not provide functions that restart from a specific point. Escpecially for VR experiment, there are various components that could occur error such as tracking, power and connection etc. Thus, if there is an error during the experiment, it needs to be done from the beginning.
 
-To resolve this issue, we developed a framework that provides a restart function from a specific trial number (where experiment is stopped by accident or error) and separated the trial randomization process by reading the pre-generated CSV file. Also, we tried to embed the reading and save the trial data, so users could focus on the stimuli design and ease the burden on those who are not familiar with Unity programming, and save time.
+To resolve this issue, we developed a library that provides a restart function from a specific trial number (where experiment is stopped by accident or error) and separated the trial randomization process by reading the pre-generated CSV file. Also, we tried to embed the reading and save the trial data, so users could focus on the stimuli design and ease the burden on those who are not familiar with Unity programming, and save time.
 
 
 ## Requirement
