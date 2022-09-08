@@ -5,6 +5,14 @@ A Unity library for 2D/3D/VR/AR Behavioral Experiment. Recent HCI and cognitive,
 To resolve this issue, we developed a library that provides a restart function from a specific trial number (where experiment is stopped by accident or error) and separated the trial randomization process by reading the pre-generated CSV file. Also, we tried to embed the reading and save the trial data, so users could focus on the stimuli design and ease the burden on those who are not familiar with Unity programming, and save time.
 
 
+## Citation
+
+Kim, J., Kim, Y.J., & Lee, J. (2022). ExpTrialMng: A Universal Experiment Trial Manager for AR/VR/MR Experiments based on Unity. arXiv preprint arXiv:2209.02966.
+
+https://arxiv.org/abs/2209.02966
+
+
+
 ## Requirement
 
 - Unity
