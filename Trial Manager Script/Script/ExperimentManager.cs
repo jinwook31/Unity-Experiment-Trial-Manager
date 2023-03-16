@@ -20,6 +20,9 @@ public class ExperimentManager : MonoBehaviour
         // Init Trial Data (Execute this before experiment starts)
         if(trialInit){
             TrialData.td.initTrialData();
+            // First Trial Info
+            string stim0 = TrialData.td.getTrialInfo(2);
+            string stim1 = TrialData.td.getTrialInfo(3);
             trialInit = false;
         }
 
@@ -34,7 +37,7 @@ public class ExperimentManager : MonoBehaviour
             // if there is next trial, reset environment and stimuli settings
             if (readDone){
                 resetEnvironment();
-
+                // Next Trial Info
                 string stim0 = TrialData.td.getTrialInfo(2);
                 string stim1 = TrialData.td.getTrialInfo(3);
             }
