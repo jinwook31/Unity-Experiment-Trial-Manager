@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class TrialData : MonoBehaviour{
     public static TrialData td;
@@ -8,7 +9,7 @@ public class TrialData : MonoBehaviour{
     // Read CSV
     private csvReader csvreader;
     List<string[]> trialData;
-    public string csvFileName = ".csv";
+    public string csvFileName = "Trial_P01";
     private int lineIdx = 0;
 
     // Input Trial Data, Output Trial Data
@@ -24,7 +25,7 @@ public class TrialData : MonoBehaviour{
 
         // Read Pre-generated CSV File
         csvreader = new csvReader();
-        trialData = csvreader.Read(csvFileName.ToString());
+        trialData = csvreader.Read(csvFileName.ToString() + ".csv");
     }
 
     public bool initTrialData(){
@@ -58,8 +59,17 @@ public class TrialData : MonoBehaviour{
 
     private string[] readNextLine(){
         while(lineIdx < trialData.Count){
-            string[] curLine = trialData[++lineIdx];
+            string[] curLine = null;
+
+            try{                
+                curLine = trialData[++lineIdx];
+            }catch(ArgumentOutOfRangeException e){
+                Debug.Log(e);
+                Debug.Log("Check the length of the trial CSV Input and Output Idx!!");
+                Quit();
+            }
             
+            // Check the index of CSV, where to start from. (In case of restarted exp.)
             if(string.Compare(curLine[trialInput.Length], "") == 0 && int.Parse(curLine[1]) >= startFrom){
                 return curLine;
             }
@@ -67,8 +77,8 @@ public class TrialData : MonoBehaviour{
         return null;
     }
 
-    public bool trialDone(bool init, string[] output){
-        if(!init) writeData2CSV(output);
+    public bool trialDone(bool initExp, string[] output){
+        if(!initExp) writeData2CSV(output);
 
         string[] line = readNextLine();
 
