@@ -27,16 +27,16 @@ import the package into your Unity project and include Experiment Manager.prefab
 
 You need to type in 4 components in Trial Data (i.e., CSV File Name, Input Idx, Output Idx, Start From)
 
-- CSV File Name : Type the name of the pre-generated trial CSV.
+- CSV File Name: Type the name of the pre-generated trial CSV.
 
-- Input Idx : Type the index of input size in pre-generated trial CSV. (ex. 6 for the csv format image)
+- Input Idx: Type the index of input size in the pre-generated trial CSV. (ex. 6 for the CSV format image)
 
-- Output Idx : Type the index of output size in pre-generated trial CSV. (ex. 3 for the csv format image)
+- Output Idx: Type the index of output size in the pre-generated trial CSV. (ex. 3 for the CSV format image)
 
-- Start From : Type the trial number that you want to start from.
+- Start From Type the trial number that you want to start from.
 
-
-After experiemnt, you can find the result CSV file in the Asset folder.
+(Regarding generating the CSV file (for me python), You need to add an empty input slot (ex. trial = [pNum, trialNum, ..., '', '', '', '', '', '', '', '']))
+After the experiment, you can find the result CSV file in the Asset folder.
 
 
 ## Experiment Manager
